@@ -107,26 +107,9 @@ h1 {
 }
 
 /* ===== Mapa ===== */
-.map-container {
-    width: 150px; /* Largura fixa do mapa */
-    height: 150px; /* Altura igual à largura para manter o formato quadrado */
-    margin-top: 20px; /* Espaço entre as informações e o mapa */
-    margin-left: auto;
-    margin-right: auto; /* Centraliza o mapa */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Para controlar o posicionamento do iframe */
-}
 
-iframe {
-    position:absolute;
-    width: 100%; /* O iframe vai ocupar toda a largura */
-    height: 100%; /* O iframe vai ocupar toda a altura */
-    height: 500px;
-    width: 500px;
-    padding-top: 370px;
-}
+
+
 
 /* =================== MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS =================== */
 
