@@ -1,0 +1,139 @@
+/* Corpo da página */
+body {
+    background-color: #afafaf; /* Cinza claro */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 70px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(80, 36, 36);
+}
+
+/* Estilo do conteúdo principal */
+main {
+    max-width: 800px;
+    margin: 90px auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicos h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: rgb(80, 36, 36);
+}
+
+.listas {
+    display: flex;
+    justify-content: center; /* Garante que as listas fiquem centralizadas horizontalmente */
+    gap: 40px; /* Espaço entre as listas */
+    flex-wrap: wrap; /* Permite que as listas se ajustem em telas pequenas */
+    margin-top: 40px; /* Espaço acima das listas */
+}
+
+.lista {
+    width: 100%; /* Ocupa 100% da largura disponível em telas pequenas */
+    max-width: 98.3%; /* Limita a largura para no máximo 45% em telas maiores */
+    background-color: #f4f4f4; /* Cor de fundo dos blocos */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar os blocos */
+    margin-bottom: 20px; /* Espaço abaixo de cada lista */
+}
+
+.lista h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Linha separando os itens da lista */
+}
+
+.lista ul li:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+/* WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-float img {
+    width: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .listas {
+        flex-direction: column;
+    }
+
+    .lista {
+        width: 100%;
+    }
+}
+
+h1{
+    color: rgb(80, 36, 36);
+}
+
+.seta-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seta-float img {
+    width: 50px;
+    margin-left: -120px;
+    transform: translateY(-40px);
+}

@@ -1,0 +1,176 @@
+/* =================== RESET GERAL =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 40px;
+    background-color: #f8f8f8;
+}
+
+/* =================== CABEÇALHO =================== */
+header {
+    background-color: rgb(172, 172, 172);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(80, 36, 36);
+}
+
+/* =================== TÍTULO =================== */
+h1 {
+    color: #800000;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* =================== SEÇÃO DE CONTATO =================== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que os itens se ajustem nas telas menores */
+}
+
+.info {
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info h2 {
+    color: #800000;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.info strong {
+    color: #800000;
+}
+
+.info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.info a:hover {
+    color: rgb(80, 36, 36);
+}
+
+/* ===== Mapa ===== */
+.map-container {
+    width: 150px; /* Largura fixa do mapa */
+    height: 150px; /* Altura igual à largura para manter o formato quadrado */
+    margin-top: 20px; /* Espaço entre as informações e o mapa */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o mapa */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para controlar o posicionamento do iframe */
+}
+
+iframe {
+    position:absolute;
+    width: 100%; /* O iframe vai ocupar toda a largura */
+    height: 100%; /* O iframe vai ocupar toda a altura */
+    height: 500px;
+    width: 500px;
+    padding-top: 370px;
+}
+
+/* =================== MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS =================== */
+
+/* Para telas pequenas, como smartphones em modo retrato */
+@media (max-width: 768px) {
+    body {
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+        margin-top: 120px; /* Ajusta a margem superior para evitar sobreposição do cabeçalho */
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 30px; /* Aumenta o espaço entre os itens para telas pequenas */
+    }
+
+    .info {
+        max-width: 90%; /* Reduz a largura para garantir que caiba na tela */
+        margin: 0 auto; /* Centraliza a informação */
+    }
+
+    .map-container {
+        width: 100%; /* Ajusta o mapa para 100% da largura do contêiner */
+    }
+}
+
+/* Para telas muito pequenas, como smartphones em modo paisagem */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Fonte menor para telas muito pequenas */
+    }
+
+    .container {
+        gap: 20px; /* Ajuste do espaço entre os itens */
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+    iframe {
+        height: 250px; /* Reduz a altura do mapa em telas muito pequenas */
+    }
+}
